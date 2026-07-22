@@ -1,5 +1,5 @@
 WEATHER = {
-    'moskow': 25,
+    'moscow': 25,
     'london': 20,
     'miami': 18,
     'dubai': 30
@@ -20,7 +20,7 @@ DB = {
 
 
 def get_weather(city: str):
-    return WEATHER[city.lower()]
+    return WEATHER.get(city.lower(), 'no available city')
 
 def calculate_discount(price: int, status: str):
     return price * (DISCOUNT[status.lower()] / 100)
