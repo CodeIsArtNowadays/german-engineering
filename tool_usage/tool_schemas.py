@@ -1,6 +1,3 @@
-from tools import get_from_db, get_weather, calculate_discount
-
-
 tools = [
 {
     'type': 'function',
@@ -54,8 +51,3 @@ tools = [
 
 ]
 
-TOOLS_REGISTER = {
-    'get_weather': get_weather,
-    'get_from_db': get_from_db,
-    'calculate_discount': calculate_discount
-}
