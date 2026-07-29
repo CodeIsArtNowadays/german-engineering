@@ -48,7 +48,7 @@ llm = ChatOpenAI(
 
 def ask_llm(state: AgentState) -> AgentState:
     system_prompt = SystemMessage(content=
-        'You are my AI assistant, please answer my query to the best of your ability.'
+        'You are my AI assistant, please answer my query to the best of your ability. You only can call one tool at the time'
     )
     response = llm.invoke([system_prompt] + state['messages'])
     
